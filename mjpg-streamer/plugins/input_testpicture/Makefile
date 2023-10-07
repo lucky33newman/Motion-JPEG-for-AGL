@@ -30,7 +30,7 @@ clean_pictures:
 	rm -f pictures/640x480_1.jpg pictures/640x480_2.jpg
 
 input_testpicture.so: $(OTHER_HEADERS) input_testpicture.c testpictures.h
-	$(CC) $(CFLAGS) -o $@ input_testpicture.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ input_testpicture.c
 
 # converts multiple JPG files to a single C header file
 testpictures.h: pictures/960x720_1.jpg pictures/640x480_1.jpg pictures/320x240_1.jpg pictures/160x120_1.jpg pictures/160x120_2.jpg pictures/320x240_2.jpg pictures/640x480_2.jpg pictures/960x720_2.jpg

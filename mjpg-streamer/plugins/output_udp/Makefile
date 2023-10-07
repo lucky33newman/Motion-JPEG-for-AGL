@@ -21,4 +21,4 @@ clean:
 	rm -f *.a *.o core *~ *.so *.lo
 
 output_udp.so: $(OTHER_HEADERS) output_udp.c
-	$(CC) $(CFLAGS) -o $@ output_udp.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ output_udp.c

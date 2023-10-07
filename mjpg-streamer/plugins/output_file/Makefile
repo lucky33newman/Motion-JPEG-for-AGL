@@ -19,4 +19,4 @@ clean:
 	rm -f *.a *.o core *~ *.so *.lo
 
 output_file.so: $(OTHER_HEADERS) output_file.c
-	$(CC) $(CFLAGS) -o $@ output_file.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ output_file.c
